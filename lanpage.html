@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 10px solid #007BFF; 
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.menu a{
+   color:rgb(197, 50, 119);
+   font-weight: 250;
+   margin: 0 12px;
+   border-bottom:3px solid transparent ;
+   transition: 0.3s ease;
+   
+   
+
+}
+.menu a:hover,
+.menu a.active{
+   color:rgb(197, 50, 119);;
+   border-bottom: 3px solid rgb(197, 50, 119);
+   
+}
+header.hero-section {
+    background: url('vjit2.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border: 5px solid #007BFF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+nav .logo {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+nav .menu li {
+    margin: 0 10px;
+}
+
+nav .menu li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav .search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: -50px;
+    color:black;
+    font-size: xx-small;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: calc();
+    color:rgb(1, 5, 6);
+    text-shadow: 2px 2px 4px rgba(228, 55, 55, 0.7);
+    -webkit-text-stroke: 1px rgb(135, 18, 100);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 1px black; 
+}
+
+.cta-buttons {
+    margin: 20px 0;
+}
+
+.cta-buttons .btn-primary, .cta-buttons .btn-secondary {
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.btn-primary {
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background: #007BFF;;
+    color:white;
+    border: 2px solid rgb(82, 33, 141);
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    border: 5px solid #007BFF;
+            margin: 20px;
+}
+section h2 {
+    color: #333; 
+}
+section p {
+    color: #666;
+}
+
+.btn-link {
+    display:inline-flex;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007BFF;
+    background-color: #f8f8f8; 
+    border: 2px solid #007BFF; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+.btn-link:hover {
+    background-color: #007BFF; 
+    color: white; 
+}
+.academics-section{
+    background-color:wheat;
+
+}
+.academics-section .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fafafa;
+}
+
+.academics-section .courses-list .course {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    width: calc(20% - 40px); /* Adjust width for 5 courses per row, including margin */
+    box-sizing: border-box;
+}
+
+.academics-section .courses-list .course h3 {
+    color: #007BFF; 
+    background-color: white;
+}
+
+.academics-section .courses-list .course p {
+    color: #333; 
+    background-color: #fafafa;
+}
+
+.academics-section .program-categories .category {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s; 
+    background-color: #fafafa;
+
+}
+
+.academics-section .program-categories .category:hover {
+    background-color: #007BFF;
+    color: white;
+}
+.admissions-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.admissions-section h2 {
+    color:orangered;
+}
+
+.admissions-section p {
+    color: #666;
+}
+
+.steps-to-apply, .eligibility-criteria, .contact-information {
+    margin: 20px 0;
+    text-align: justify;
+}
+.important-dates{
+    text-align: right;
+}
+.contact-information{
+    text-align: right;
+}
+
+
+.steps-to-apply h3, .important-dates h3, .eligibility-criteria h3, .contact-information h3 {
+    color: #007BFF;
+}
+
+.steps-to-apply ol, .important-dates ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.steps-to-apply li, .important-dates li {
+    margin: 5px 0;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.btn-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007BFF;
+    background-color: #f8f8f8;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+
+.about-section h3{
+    color:brown;
+    font-size: 45px;
+
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.about-section h2 {
+    color:red; 
+}
+
+.about-section p {
+    color: black; 
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-quick-links a, .footer-legal a {
+    color: white;
+    margin: 0 10px;
+    text-decoration:double;
+}
+.footer-legal .footer-boxed-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .footer-legal .footer-boxed-links a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+.carousel {
+            position: relative;
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 5px solid #007BFF;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
+        }
+        .campus-life-section{
+            background-color: auto;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya Jyothi Institute of Technology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav>
+            <div class="logo">
+                <img src="vjitlogo.jpg" alt="" width="200" height="150">
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Campus Life</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1 class="h1">Welcome to Vidya Jyothi Institute of Technology </h1>
+            <p class="p">Where Innovation Meets Tradition</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Apply Now</a>
+                <a href="#" class="btn-secondary">Schedule a Visit</a>
+                <a href="#" class="btn-secondary">Request Info</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <h2>About Vidya Jyothi Institute of Technology</h2>
+        <h3 class="h3">Vidya Jyothi
+            A light house of knowledge</h3>
+        <p class="p">Vidya Jyothi Institute of Technology was established in 1998 by Vidya Jyothi Educational Society created by a group of committed academicians and enterprising educationists. VJIT quickly won the confidence of the parent community and the students to become one of the select destinations for future engineers. Soon the lamp of knowledge began to spread its radiance far and wide. The institute is committed to adopt the changes in Engineering Education and strongly believes in and strives to strengthen the Technical Education. The highest quality of VJIT’s academics is mirrored in the consistent 95% academic results. The institution registers an average of 82% placements for eligible students.</p>
+        <div class="image-carousel">
+            <img src="vjit3.jpg" alt="" width="500" height="auto">
+            <img src="vjit4.jpg" alt="" width="420" height="auto">
+        
+        </div>
+        <a href="#" class="btn-link">Learn More About Our History</a>
+    </section>
+
+    <section class="academics-section">
+        <h2>Explore Our Academic Excellence</h2>
+        <p>A Diverse Range of Programs to Propel Your Future</p>
+        <div class="program-categories">
+            <a href="#" class="category">Undergraduate</a>
+            <a href="#" class="category">Graduate</a>
+            <a href="#" class="category">Professional Studies</a>
+        </div>
+        <div class="courses-list">
+            <div class="course">
+                <h3>Artificial Intelligence</h3>
+                <p>B.Tech (AI) - Intake: 120</p>
+            </div>
+            <div class="course">
+                <h3>Artificial Intelligence & Data Science</h3>
+                <p>B.Tech (AI & DS) - Intake: 60</p>
+            </div>
+            <div class="course">
+                <h3>Computer Science & Engineering</h3>
+                <p>B.Tech (CSE) Intake – 240
+                    M.Tech (CSE) Intake – 18</p>
+            </div>
+            <div class="course">
+                <h3>Computer Science & Engineering (Data Science)</h3>
+                <p>B.Tech CSE (DS) Intake – 120</p>
+            </div>
+            <div class="course">
+                <h3>Computer Science & Engineering(AI & ML)
+                    </h3>
+                <p>B.Tech CSE (AI & ML) Intake – 120</p>
+            </div>
+            <div class="course">
+                <h3>Information Technology</h3>
+                <p> B.Tech (IT) Intake – 180</p>
+            </div>
+            <div class="course">
+                <h3>Electronics & Communication Engineering
+                    </h3>
+                <p>B.Tech (ECE) Intake – 240
+                    M.Tech (VLSI) Intake – 24
+                    M.Tech (Embedded Systems) Intake – 24</p>
+            </div>
+            <div class="course">
+                <h3>Electrical & Electronics Engineering</h3>
+                <p>B.Tech (EEE) Intake – 60
+                    M.Tech (Electrical Power System) Intake – 24</p>
+            </div>
+            <div class="course">
+                <h3>Civil Engineering
+                    </h3>
+                <p>B.Tech (Civil) Intake – 60
+                    M.Tech (Structural Engineering) Intake – 24</p>
+            </div>
+            <div class="course">
+                <h3>Mechanical Engineering
+                    </h3>
+                <p>B.Tech (Mech) Intake – 60
+                    M.Tech (CAD/CAM) Intake – 24</p>
+            </div><div class="course">
+                <h3>Humanities and Sciences
+                    
+                    </h3>
+                <p>Department of
+                    Humanities and Sciences</p>
+            </div>
+            <div class="course">
+                <h3>Master of Business Administration</h3>
+                    <p>MBA Intake – 120
+                    Finance Marketing
+                    Human Resource Management
+                    Entrepreneurship</p>
+            </div>
+            <br>
+           <div> 
+        <a href="#" class="btn-link">Discover Our Programs</a>
+        </div>
+    </section>
+
+    <section class="admissions-section">
+        <h2>Join Our Community</h2>
+        <div class="steps-to-apply">
+            <h3>steps-to-apply</h3>
+            <ol>
+                <li>Complete the online application form.</li>
+                <li>Submit required documents (transcripts, test scores, etc.).</li>
+                <li>Pay the application fee.</li>
+                <li>Schedule an interview (if applicable).</li>
+                <li>Receive your admission decision.</li>
+            </ol>
+            
+        </div>
+        <div class="important-dates">
+            <h3>Important Dates</h3>
+            <ul>
+                <li>Application Opens: January 1</li>
+                <li>Application Deadline: March 31</li>
+                <li>Interviews: April 15 - May 15</li>
+                <li>Decision Release: June 1</li>
+                <li>Enrollment Deadline: July 15</li>
+            </ul>
+        </div>
+        <div class="eligibility-criteria">
+            <h3>Eligibility Criteria</h3>
+            <p>Eligibility Criteria for B.Tech:<br>
+                1.Educational Qualification:<br>
+                Candidates should have completed their 10+2 (or equivalent) examination from a recognized board.
+                They should have studied Physics, Chemistry, and Mathematics as core subjects.</p><br>
+                <p>2.Minimum Marks:<br>
+                Most institutions require candidates to have secured a minimum percentage of marks in their 10+2 examination (typically 50-60% aggregate).</p><br>
+                <p>3.Entrance Exams:<br>
+                Candidates are often required to qualify for national or state-level engineering entrance exams. Examples include:
+                </p>
+        </div>
+        <div class="contact-information">
+            <h3>Contact Us</h3>
+            <p>For any questions or assistance, please contact our admissions office:</p>
+            <p>Email: admissions@vjit.edu</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="cta-buttons">
+            <a href="#" class="btn-link">Start Your Application</a>
+            <a href="#" class="btn-link">Request Info</a>
+            <a href="#" class="btn-link">Schedule a Visit</a>
+        </div>
+        <a href="#" class="btn-link">Start Your Application</a>
+    </section>
+
+    <section class="campus-life-section">
+        <h2>campus life</h2>
+        <img src="vjit5.jpg" alt="" width="500",height="auto">
+        <h3>VJIT Campus Environment</h3>
+            <p>VJIT has created very beautiful and sprawling lush green campus with aesthetically designed spaces for study and relaxation for the students.
+            The campus environment is truly inspiring with the campus being a hub of academic, cultural, social and community outreach programs. Here you go through the journey of learning with moments that keeps your spirits high all through your life.</p>
+        
+        <div class="student-testimonials">
+            
+        </div>
+        <a href="#" class="btn-link">Experience Campus Life</a>
+    </section>
+
+    
+    <footer>
+        <div class="footer-legal">
+            <div class="footer-boxed-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Accessibility</a>
+        </div>
+        <div class="footer-contact">
+            <p>Address, phone number, email, and social media links.</p>
+        </div>
+        <div class="newsletter-signup">
+            <input type="email" placeholder="Enter your email for updates">
+            <button>Sign Up</button>
+        </div>
+        <div class="footer-legal">
+    
+            <p>&copy; 2023 Vidya Jyothi Institute of Technology. All rights reserved.</p>
+
+        </div>
+    </footer>
+</body>
+</html>
